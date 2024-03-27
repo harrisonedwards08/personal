@@ -1,7 +1,6 @@
 class Solution(object):
     def majorityElement(self, nums):
         
-        prev = 1000
 
         results = {}
         
@@ -14,8 +13,18 @@ class Solution(object):
                 results[num] = 1
         
         return max(results, key=results.get)
+    
+    def majorityElement2(self,nums):
+        nums.sort()
+
+        return nums[int(len(nums)/2)]
+
+    
+
         
 print(Solution.majorityElement(0,[1,1,1,3,3,0,5]))
+print(Solution.majorityElement2(0,[1,1,1,3,3,0,5]))
+
 
 
 
